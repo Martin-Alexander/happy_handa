@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'application#happy_handa'
+  root 'static_pages#home'
+  # get ''
 end
