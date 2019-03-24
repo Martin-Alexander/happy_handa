@@ -12,6 +12,10 @@ class GoalsController < ApplicationController
   end
   
   def create
+    @goal = Goal.new(name: params[:goal][:name])
+    @goal.save
+
+    redirect_to goals_path
   end
 
   def edit
