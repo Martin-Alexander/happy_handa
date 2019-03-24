@@ -1,0 +1,11 @@
+<h1>Edit your daily goal</h1>
+
+<div>
+    <%= form_for(@goal) do |x| %>
+
+        <%= x.label :name %>
+        <%= x.text_field :name, :placeholder => "add a description" %>
+
+        <%= x.submit "submit" %>
+    <% end %>
+</div>

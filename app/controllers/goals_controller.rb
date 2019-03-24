@@ -1,6 +1,7 @@
 class GoalsController < ApplicationController
   
   def index
+    @goals = Goal.all
   end
 
   def new
@@ -11,6 +12,7 @@ class GoalsController < ApplicationController
   end
 
   def edit
+    @goal = Goal.find(params[:id])
   end
 
   def destroy
