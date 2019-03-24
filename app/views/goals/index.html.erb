@@ -1,9 +1,10 @@
 <%= link_to "back to calendar", goals_path %>
+<head><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></head>
 
 <div>
 <ul>
     <% @goals.each do |goal| %>
-    <li><%= goal.name %> <%= link_to "hi", edit_goal_path(goal) %> <%= link_to "del", goal_path(goal), method: :delete %></li>
+    <li><%= goal.name %> <%= link_to ('<i class="fas fa-pencil-alt"></i>').html_safe, edit_goal_path(goal) %> <%= link_to ('<i class="fas fa-trash-alt"></i>').html_safe, goal_path(goal), method: :delete %></li>
     <% end %>
 </ul>
 

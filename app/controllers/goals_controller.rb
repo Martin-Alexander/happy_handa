@@ -26,4 +26,11 @@ class GoalsController < ApplicationController
     @goal = Goal.find(params[:id])
     @goal.destroy
   end
+
+  def update
+    @goal = Goal.find(params[:id])
+    @goal.update(name: params[:goal][:name])
+    
+    redirect_to goals_path
+  end
 end
