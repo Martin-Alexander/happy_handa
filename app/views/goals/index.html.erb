@@ -3,9 +3,9 @@
 <div>
 <ul>
     <% @goals.each do |goal| %>
-    <li><%= link_to goal.name, goals_path(goal) %></li>
+    <li><%= goal.name %> <%= link_to "hi", edit_goal_path(goal) %> <%= link_to "del", goal_path(goal), method: :delete %></li>
     <% end %>
 </ul>
 
-<%= link_to "Add a new goal", goals_new_path %>
+<%= link_to "Add a new goal", new_goal_path %>
 </div>

@@ -19,5 +19,7 @@ class GoalsController < ApplicationController
   end
 
   def destroy
+    @goal = Goal.find(params[:id])
+    @goal.destroy
   end
 end
