@@ -14,10 +14,14 @@
  *= require_self
  */
 
- /*
- *= require font-awesome
- */
-
- .fas fa-trash-alt {
+ .fas.fa-trash-alt {
      color: black;
  }
+
+ ul {
+    list-style-type: none;
+  }
+
+  .card {
+      padding: 30px;
+  }

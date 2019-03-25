@@ -13,7 +13,6 @@ gem 'jquery-rails', '4.3.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 gem 'bootsnap', require: false
-gem 'font-awesome-rails'
 gem 'devise'
 
 group :development, :test do
