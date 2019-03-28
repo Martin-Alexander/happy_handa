@@ -3,7 +3,7 @@
 <div>
 <ul>
     <% @goals.each do |goal| %>
-    <li class="card"><%= goal.name %> <%= link_to ('<i class="fas fa-pencil-alt"></i>').html_safe, edit_goal_path(goal) %> <%= link_to ('<i class="fas fa-trash-alt"></i>').html_safe, goal_path(goal), method: :delete %></li>
+    <li class="card"><%= goal.name %> <%= link_to ('<i class="fas fa-pencil-alt"></i>').html_safe, edit_goal_path(goal) %> <%= link_to ('<i class="fas fa-trash-alt"></i>').html_safe, goal_path(goal), method: :delete %> </li>
     <% end %>
 </ul>
 
