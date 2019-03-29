@@ -1,4 +1,6 @@
 class GoalsController < ApplicationController 
+  before_action :authenticate_user!, only: [:index]
+
   def index
     @goals = Goal.where(user: current_user)
   end
