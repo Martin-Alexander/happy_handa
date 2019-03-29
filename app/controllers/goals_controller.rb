@@ -1,19 +1,18 @@
-class GoalsController < ApplicationController
-  before_action :current_user, only: [:index, :edit, :update] # help
-  
+class GoalsController < ApplicationController 
   def index
-    @goals = Goal.all
+    @goals = Goal.where(user: current_user)
   end
 
   def show
   end
 
   def new
-    @goal = Goal.current_user.new #uh idk if this must be changed help
+    @goal = Goal.new
   end
   
   def create
-    @goal = Goal.current_user.new(name: params[:goal][:name]) #help xD
+    @goal = Goal.new(name: params[:goal][:name]) #help xD
+    @goal.user = current_user
     @goal.save
 
     redirect_to goals_path
